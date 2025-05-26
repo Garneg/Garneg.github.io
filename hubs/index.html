@@ -1,12 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HubsMainWebPage</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
-    <script type="application/javascript" src="composeApp.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Хабы — неофициальный клиент Хабра</title>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --secondary-text: #666;
+      --card-bg: #e0ebf3;
+      --btn-4pda: #2982cc;
+      --btn-github: #24292e;
+      --btn-text: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #f1f1f1;
+        --secondary-text: #aaa;
+        --card-bg: #1e1e1e;
+        --btn-4pda: #1565c0;
+        --btn-github: #3f3f3f;
+        --btn-text: #fff;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      height: 100svh;
+    }
+
+    header {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .title-container img {
+      width: 48px;
+      height: 48px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-top: 10px;
+      color: var(--secondary-text);
+    }
+
+    .version {
+      margin-top: 20px;
+      padding: 6px 12px;
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      font-size: 0.95rem;
+      color: var(--text-color);
+      display: inline-block;
+    }
+
+    .content-container {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .changelog {
+      margin: 20px;
+      padding: 6px 12px;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      font-size: 1rem;
+      color: var(--text-color);
+      overflow-y: auto;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: inherit;
+    }
+
+    .btn {
+      background-color: var(--btn-4pda);
+      color: var(--btn-text);
+      border: none;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .btn.github {
+      background-color: var(--btn-github);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="title-container">
+      <img src="https://github.com/Garneg/Hubs/raw/refs/heads/dev/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="Хабы лого">
+      <h1>Хабы</h1>
+    </div>
+    <h2>неофициальный клиент Хабра</h2>
+    <div class="version">версия 2.7.0</div>
+  </header>
+
+  <div class="content-container">
+    <div class="changelog">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat, leo non congue lacinia, metus nulla bibendum enim, at tempus lorem lacus et libero. Curabitur finibus, mauris non sodales posuere, purus tellus euismod velit, in finibus ante erat sed justo. Sed sit amet libero nec augue tincidunt convallis. Pellentesque vitae ex vel leo tincidunt sagittis. Aliquam erat volutpat. Fusce ornare felis nec justo viverra, ac cursus erat tincidunt. Vivamus luctus neque in arcu euismod, a tincidunt velit placerat. In hac habitasse platea dictumst. Suspendisse vehicula blandit massa, nec dapibus metus. Nunc feugiat porta viverra. Duis ac dapibus orci. Vivamus condimentum consectetur fermentum. Etiam ac efficitur velit. Donec feugiat nunc id magna scelerisque iaculis. In nec lacinia lacus. Sed id feugiat tellus.
+      Phasellus porttitor metus nec libero egestas, sed efficitur lectus tincidunt. Pellentesque ac ex id odio tristique rhoncus. Duis condimentum justo et lacus pharetra porta. Vestibulum rutrum turpis id viverra suscipit. Etiam pretium erat ut ante faucibus, nec dapibus metus dictum. Curabitur imperdiet luctus fermentum. Fusce ut enim leo. Vivamus facilisis posuere turpis at suscipit. Cras vitae imperdiet nunc. Proin porttitor tellus sed lorem congue, vel ultricies nulla cursus. Sed ultrices eu risus et tincidunt.
+    </div>
+
+    <footer>
+      <a class="btn" href="https://4pda.to/forum/index.php?showtopic=1065764&view=findpost&p=131359521" target="_blank" rel="noopener">Скачать с 4PDA</a>
+      <a class="btn github" href="https://github.com/garneg/hubs" target="_blank" rel="noopener">GitHub репозиторий</a>
+    </footer>
+  </div>
 </body>
 </html>
