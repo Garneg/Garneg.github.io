@@ -72,6 +72,11 @@
       margin-top: 10px;
       color: var(--secondary-text);
     }
+     
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: -8px;
+    }
 
     .version {
       margin-top: 20px;
@@ -79,6 +84,7 @@
       background-color: var(--card-bg);
       border-radius: 20px;
       font-size: 0.95rem;
+      font-weight: 500;
       color: var(--text-color);
       display: inline-block;
     }
@@ -92,6 +98,8 @@
     }
 
     .changelog {
+      list-style: none;
+     
       margin: 20px;
       padding: 6px 12px;
       background-color: var(--card-bg);
@@ -134,6 +142,11 @@
       transform: scale(0.95);
       transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.2em;
+    }
   </style>
 </head>
 <body>
@@ -143,18 +156,42 @@
       <h1>Хабы</h1>
     </div>
     <h2>неофициальный клиент Хабра</h2>
-    <div class="version">версия 2.7.0</div>
+    <div class="version">Версия 2.7.0</div>
   </header>
 
   <div class="content-container">
     <div class="changelog">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat, leo non congue lacinia, metus nulla bibendum enim, at tempus lorem lacus et libero. Curabitur finibus, mauris non sodales posuere, purus tellus euismod velit, in finibus ante erat sed justo. Sed sit amet libero nec augue tincidunt convallis. Pellentesque vitae ex vel leo tincidunt sagittis. Aliquam erat volutpat. Fusce ornare felis nec justo viverra, ac cursus erat tincidunt. Vivamus luctus neque in arcu euismod, a tincidunt velit placerat. In hac habitasse platea dictumst. Suspendisse vehicula blandit massa, nec dapibus metus. Nunc feugiat porta viverra. Duis ac dapibus orci. Vivamus condimentum consectetur fermentum. Etiam ac efficitur velit. Donec feugiat nunc id magna scelerisque iaculis. In nec lacinia lacus. Sed id feugiat tellus.
-      Phasellus porttitor metus nec libero egestas, sed efficitur lectus tincidunt. Pellentesque ac ex id odio tristique rhoncus. Duis condimentum justo et lacus pharetra porta. Vestibulum rutrum turpis id viverra suscipit. Etiam pretium erat ut ante faucibus, nec dapibus metus dictum. Curabitur imperdiet luctus fermentum. Fusce ut enim leo. Vivamus facilisis posuere turpis at suscipit. Cras vitae imperdiet nunc. Proin porttitor tellus sed lorem congue, vel ultricies nulla cursus. Sed ultrices eu risus et tincidunt.
+    <h2><b>Список изменений</b></h2>
+
+<h3>Нововведения</h3>
+<ul>
+  <li> Добавлен виджет “Читают сейчас”</li>
+  <li> Реализован экран подписок, где можно просмотреть все свои подписки и заблокированных пользователей</li>
+  <li> На экране поиска теперь отображается список статей, которые читают прямо сейчас</li>
+  <li> Экран просмотра изображений переработан — открывается быстрее и работает стабильнее</li>
+  <li> Для устройств с Android 12+ добавлен диалог с предложением настроить открытие ссылок в приложении по умолчанию</li>
+  <li> Добавлен переход к новым комментариям, аналогичный реализованному на Хабре</li>
+  <li> Теперь на экране поиска можно перейти по ссылке, если она ведет на статью, хаб, компанию или пользователя</li>
+  <li> Внедрена поддержка предиктивного жеста “назад”</li>
+  <li> Улучшена обработка системных отступов</li>
+  <li> Темная тема стала более контрастной</li>
+  <li> Переработаны анимации переходов между экранами</li>
+  <li> Повышена плавность анимаций на экране статьи во время загрузки</li>
+  <li> Добавлена монохромная иконка приложения</li>
+</ul>
+
+<h3>Исправления</h3>
+<ul>
+  <li> Устранен краш после недолгого использования приложения на Android 14</li>
+  <li> Исправлен краш при попытке скачать статью на Android 14</li>
+</ul>
+  
     </div>
+
 
     <footer>
       <a class="btn" href="https://4pda.to/forum/index.php?showtopic=1065764&view=findpost&p=131359521" target="_blank" rel="noopener">Скачать с 4PDA</a>
-      <a class="btn github" href="https://github.com/garneg/hubs" target="_blank" rel="noopener">GitHub репозиторий</a>
+      <a class="btn github" href="https://github.com/garneg/hubs" target="_blank" rel="noopener">Скачать с Github</a>
     </footer>
   </div>
 </body>
